@@ -79,6 +79,7 @@ static char rcsid[] = "$OpenBSD: ar.c,v 1.3 1997/01/15 23:42:11 millert Exp $";
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <getopt.h>
 
 #include "archive.h"
 #include "extern.h"
@@ -110,7 +111,7 @@ main(argc, argv)
 	fcall = 0;
 	verbose = 0;
 	progname = argv[0];
-	run_ranlib = 1;
+	run_ranlib = 0;
 
 	if (argc < 3)
 		usage();
