@@ -36,7 +36,7 @@
 #ifndef _I386_LIMITS_H_
 #define _I386_LIMITS_H_
 
-#include <sys/cdefs.h>
+
 #include <i386/_limits.h>
 
 #define	CHAR_BIT	8		/* number of bits in a char */

@@ -47,7 +47,7 @@
 
 #warning "<mach/shared_memory_server.h> is deprecated.  Please use <mach/shared_region.h> instead."
 
-#include <sys/cdefs.h>
+
 #include <mach/vm_prot.h>
 #include <mach/vm_types.h>
 #include <mach/mach_types.h>
@@ -121,14 +121,18 @@ struct shared_region_range_np {
 
 #ifndef KERNEL
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 int	shared_region_map_file_np(int fd,
 				  uint32_t mappingCount,
 				  const struct shared_file_mapping_np *mappings,
 				  int64_t *slide_p);
 int	shared_region_make_private_np(uint32_t rangeCount,
 				      const struct shared_region_range_np *ranges);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif /* !KERNEL */
 

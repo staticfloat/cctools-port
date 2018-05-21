@@ -76,9 +76,11 @@
 #include <mach/mig_errors.h>
 #include <mach/mach_error.h>
 
-#include <sys/cdefs.h>
 
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 /*
  * Standard prototypes
  */
@@ -128,6 +130,8 @@ extern kern_return_t	clock_sleep(mach_port_t,
 				    int,
 				    mach_timespec_t,
 				    mach_timespec_t *);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_H_ */

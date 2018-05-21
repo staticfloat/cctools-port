@@ -38,8 +38,10 @@ typedef function_table_entry   *function_table_t;
 __BeforeMigUserHeader
 #endif /* __BeforeMigUserHeader */
 
-#include <sys/cdefs.h>
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 
 /* Routine clock_get_time */
@@ -82,7 +84,9 @@ kern_return_t clock_alarm
 	clock_reply_t alarm_port
 );
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 /********************** Caution **************************/
 /* The following data types should be used to calculate  */

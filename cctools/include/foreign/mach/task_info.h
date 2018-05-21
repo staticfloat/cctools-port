@@ -70,7 +70,7 @@
 #include <mach/time_value.h>
 #include <mach/policy.h>
 
-#include <sys/cdefs.h>
+
 
 /*
  *	Generic information structure to allow for expansion.

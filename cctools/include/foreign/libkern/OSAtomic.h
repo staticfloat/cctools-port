@@ -60,7 +60,9 @@
  *
  * The spinlock and queue operations always incorporate a barrier.
  */ 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 
 /* Arithmetic functions.  They return the new value.
@@ -205,6 +207,8 @@ void* OSAtomicDequeue( OSQueueHead *__list, size_t __offset);
 void    OSMemoryBarrier( void );
 
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif /* _OSATOMIC_H_ */

@@ -66,7 +66,7 @@
 #ifndef _I386__ENDIAN_H_
 #define	_I386__ENDIAN_H_
 
-#include <sys/cdefs.h>
+
 /*
  * Define _NOQUAD if the compiler does NOT support 64-bit integers.
  */

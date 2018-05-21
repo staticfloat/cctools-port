@@ -61,13 +61,15 @@
 #include <mach/mach_types.h>
 #include <stdarg.h>
 
-#include <sys/cdefs.h>
+
 
 /*
  *	Kernel-related ports; how a task/thread controls itself
  */
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 extern mach_port_t mach_task_self(void);
 extern mach_port_t mach_host_self(void);
 extern mach_port_t mach_thread_self(void);
@@ -77,9 +79,13 @@ extern	mach_port_t	mach_task_self_;
 #define	mach_task_self() mach_task_self_
 #define	current_task()	mach_task_self()
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 #include <mach/mach_traps.h>
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 /*
  *	Other important ports in the Mach user environment
@@ -132,6 +138,8 @@ extern	int		vm_page_shift;
  *	application to point to a user-specified output function
  */
 extern int (*vprintf_stderr_func)(const char *format, va_list ap);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_INIT_ */

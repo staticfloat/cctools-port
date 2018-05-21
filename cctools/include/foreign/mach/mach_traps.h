@@ -77,9 +77,11 @@
 
 #include <machine/endian.h>
 
-#include <sys/cdefs.h>
 
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 
 
@@ -147,6 +149,8 @@ extern kern_return_t map_fd(
 #endif	/* !defined(__LP64__) */
 
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_MACH_TRAPS_H_ */

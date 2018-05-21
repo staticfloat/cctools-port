@@ -31,7 +31,7 @@
 
 #include <mach/mach_types.h>
 
-#include <sys/cdefs.h>
+
 
 struct mach_timebase_info {
 	uint32_t	numer;
@@ -41,7 +41,9 @@ struct mach_timebase_info {
 typedef struct mach_timebase_info	*mach_timebase_info_t;
 typedef struct mach_timebase_info	mach_timebase_info_data_t;
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 kern_return_t		mach_timebase_info(
 						mach_timebase_info_t	info);
@@ -51,6 +53,8 @@ kern_return_t		mach_wait_until(
 
 
 uint64_t			mach_absolute_time(void);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif /* _MACH_MACH_TIME_H_ */

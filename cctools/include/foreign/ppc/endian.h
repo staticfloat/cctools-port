@@ -92,7 +92,7 @@
 #ifndef _PPC_ENDIAN_H_
 #define	_PPC_ENDIAN_H_
 
-#include <sys/cdefs.h>
+
 
 /*
  * Define the order of 32-bit words in 64-bit words.

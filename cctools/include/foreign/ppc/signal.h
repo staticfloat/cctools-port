@@ -32,7 +32,7 @@
 #ifndef	_PPC_SIGNAL_H_
 #define	_PPC_SIGNAL_H_ 1
 
-#include <sys/cdefs.h>
+
 
 #ifndef _ANSI_SOURCE
 

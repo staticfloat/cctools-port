@@ -74,7 +74,7 @@
 #include <cpu/types.h>
 #endif /* __DragonFly__ */
 #include <i386/_types.h>
-#include <sys/cdefs.h>
+
 /*
  * Basic integral types.  Omit the typedef if
  * not possible for a machine/compiler combination.

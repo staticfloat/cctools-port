@@ -34,7 +34,7 @@
 #ifndef _BSD_PPC_SETJMP_H_
 #define _BSD_PPC_SETJMP_H_
 
-#include <sys/cdefs.h>
+
 
 #define __need_struct_sigcontext
 #include <ppc/_structs.h>
@@ -78,7 +78,9 @@ struct _jmp_buf {
 typedef int jmp_buf[_JBLEN];
 typedef int sigjmp_buf[_JBLEN + 1];
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 int	setjmp(jmp_buf);
 void	longjmp(jmp_buf, int);
 
@@ -92,6 +94,8 @@ void	siglongjmp(sigjmp_buf, int);
 #if !defined(_ANSI_SOURCE) && (!defined(_POSIX_C_SOURCE) || defined(_DARWIN_C_SOURCE))
 void	longjmperror(void);
 #endif /* neither ANSI nor POSIX */
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif /* !_BSD_PPC_SETJMP_H_ */

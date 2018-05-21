@@ -68,13 +68,17 @@
 
 #define	LDT_AUTO_ALLOC	0xffffffff
 
-#include <sys/cdefs.h>
+
 
 union ldt_entry;
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 int i386_get_ldt(int, union ldt_entry *, int);
 int i386_set_ldt(int, const union ldt_entry *, int);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _I386_USER_LDT_H_ */

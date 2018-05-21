@@ -39,9 +39,11 @@
 #ifndef __LIBKERN_OSRETURN_H
 #define __LIBKERN_OSRETURN_H
 
-#include <sys/cdefs.h>
 
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 #include <mach/error.h>
 
@@ -193,6 +195,8 @@ typedef kern_return_t OSReturn;
  */
 #define kOSMetaClassNoKext            libkern_metaclass_err(11)
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif /* ! __LIBKERN_OSRETURN_H */

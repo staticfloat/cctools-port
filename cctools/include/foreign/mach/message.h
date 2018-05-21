@@ -77,7 +77,7 @@
 #include <mach/kern_return.h>
 #include <mach/machine/vm_types.h>
 
-#include <sys/cdefs.h>
+
 
 /*
  *  The timeout mechanism uses mach_msg_timeout_t values,
@@ -728,7 +728,9 @@ typedef kern_return_t mach_msg_return_t;
                 /* Waiting for receive with timeout. (Internal use only.) */
 
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 /*
  *	Routine:	mach_msg_overwrite
@@ -777,7 +779,9 @@ extern mach_msg_return_t	mach_msg(
 					mach_port_name_t notify);
 
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_MESSAGE_H_ */
 

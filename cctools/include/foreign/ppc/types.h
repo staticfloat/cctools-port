@@ -68,7 +68,7 @@
 
 #ifndef __ASSEMBLER__
 #include <ppc/_types.h>
-#include <sys/cdefs.h>
+
 /*
  * Basic integral types.  Omit the typedef if
  * not possible for a machine/compiler combination.

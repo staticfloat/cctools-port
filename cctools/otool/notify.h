@@ -31,7 +31,7 @@
 #ifndef __NOTIFICATION_H__
 #define __NOTIFICATION_H__
 
-#include <sys/cdefs.h>
+
 #include <stdint.h>
 #include <mach/message.h>
 
@@ -83,7 +83,9 @@
 #define NOTIFY_REUSE 0x00000001
 
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 /* 
  * Post a notification for a name.
@@ -214,6 +216,8 @@ uint32_t notify_check(int token, int *check);
  */
 uint32_t notify_cancel(int token);
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif __NOTIFICATION_H__

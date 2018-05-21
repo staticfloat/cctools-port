@@ -28,7 +28,9 @@
 #include    <sys/cdefs.h>
 #include    <stdint.h>
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 
 /* Functions performed by sys_cache_control(): */
@@ -60,6 +62,8 @@ void	sys_icache_invalidate( void *start, size_t len);
 void	sys_dcache_flush( void *start, size_t len);
 
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif /* _OS_CACHE_CONTROL_H_ */

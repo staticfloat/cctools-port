@@ -33,7 +33,7 @@
 #ifndef	_I386_SIGNAL_H_
 #define	_I386_SIGNAL_H_ 1
 
-#include <sys/cdefs.h>
+
 
 #ifndef _ANSI_SOURCE
 typedef int sig_atomic_t; 

@@ -38,8 +38,10 @@ typedef function_table_entry   *function_table_t;
 __BeforeMigUserHeader
 #endif /* __BeforeMigUserHeader */
 
-#include <sys/cdefs.h>
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 
 /* Routine task_create */
@@ -508,7 +510,9 @@ kern_return_t task_set_state
 	mach_msg_type_number_t new_stateCnt
 );
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 /********************** Caution **************************/
 /* The following data types should be used to calculate  */

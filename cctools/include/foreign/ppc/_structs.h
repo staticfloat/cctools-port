@@ -26,7 +26,7 @@
  * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
  */
 
-#include <sys/cdefs.h>
+
 
 #ifdef __need_mcontext_t
 #ifndef __need_struct_mcontext

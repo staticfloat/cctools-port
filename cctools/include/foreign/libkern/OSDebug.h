@@ -35,10 +35,12 @@
 #ifndef _OS_OSDEBBUG_H
 #define _OS_OSDEBBUG_H
 
-#include <sys/cdefs.h>
+
 #include <mach/mach_types.h>
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 extern int log_leaks;
 
@@ -55,7 +57,9 @@ extern unsigned OSBacktrace(void **bt, unsigned maxAddrs);
 
 vm_offset_t OSKernelStackRemaining( void );
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #define TRACE_MACHLEAKS(a,b,c,d)	\
 do {					\

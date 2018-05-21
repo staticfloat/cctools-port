@@ -32,7 +32,7 @@
 #ifndef	_MACH_PPC__STRUCTS_H_
 #define	_MACH_PPC__STRUCTS_H_
 
-#include <sys/cdefs.h>
+
 
 /*
  * ppc_thread_state is the structure that is exported to user threads for 

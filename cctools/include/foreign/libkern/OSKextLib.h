@@ -29,8 +29,10 @@
 #ifndef _LIBKERN_OSKEXTLIB_H
 #define _LIBKERN_OSKEXTLIB_H
 
-#include <sys/cdefs.h>
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 #include <stdint.h>
 #include <mach/kmod.h>
@@ -467,6 +469,8 @@ typedef uint32_t  OSKextLoadTag;
 
 
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif /* _LIBKERN_OSKEXTLIB_H */
